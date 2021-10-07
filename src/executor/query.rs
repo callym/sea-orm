@@ -440,6 +440,574 @@ where
     }
 }
 
+impl<A, B, C, D, E> TryGetableMany for (A, B, C, D, E)
+where
+    A: TryGetable,
+    B: TryGetable,
+    C: TryGetable,
+    D: TryGetable,
+    E: TryGetable,
+{
+    fn try_get_many(res: &QueryResult, pre: &str, cols: &[String]) -> Result<Self, TryGetError> {
+        try_get_many_with_slice_len_of(5, cols)?;
+        Ok((
+            A::try_get(res, pre, &cols[0])?,
+            B::try_get(res, pre, &cols[1])?,
+            C::try_get(res, pre, &cols[2])?,
+            D::try_get(res, pre, &cols[3])?,
+            E::try_get(res, pre, &cols[4])?,
+        ))
+    }
+}
+
+impl<A, B, C, D, E, F> TryGetableMany for (A, B, C, D, E, F)
+where
+    A: TryGetable,
+    B: TryGetable,
+    C: TryGetable,
+    D: TryGetable,
+    E: TryGetable,
+    F: TryGetable,
+{
+    fn try_get_many(res: &QueryResult, pre: &str, cols: &[String]) -> Result<Self, TryGetError> {
+        try_get_many_with_slice_len_of(6, cols)?;
+        Ok((
+            A::try_get(res, pre, &cols[0])?,
+            B::try_get(res, pre, &cols[1])?,
+            C::try_get(res, pre, &cols[2])?,
+            D::try_get(res, pre, &cols[3])?,
+            E::try_get(res, pre, &cols[4])?,
+            F::try_get(res, pre, &cols[5])?,
+        ))
+    }
+}
+
+impl<A, B, C, D, E, F, G> TryGetableMany for (A, B, C, D, E, F, G)
+where
+    A: TryGetable,
+    B: TryGetable,
+    C: TryGetable,
+    D: TryGetable,
+    E: TryGetable,
+    F: TryGetable,
+    G: TryGetable,
+{
+    fn try_get_many(res: &QueryResult, pre: &str, cols: &[String]) -> Result<Self, TryGetError> {
+        try_get_many_with_slice_len_of(7, cols)?;
+        Ok((
+            A::try_get(res, pre, &cols[0])?,
+            B::try_get(res, pre, &cols[1])?,
+            C::try_get(res, pre, &cols[2])?,
+            D::try_get(res, pre, &cols[3])?,
+            E::try_get(res, pre, &cols[4])?,
+            F::try_get(res, pre, &cols[5])?,
+            G::try_get(res, pre, &cols[6])?,
+        ))
+    }
+}
+
+impl<A, B, C, D, E, F, G, H> TryGetableMany for (A, B, C, D, E, F, G, H)
+where
+    A: TryGetable,
+    B: TryGetable,
+    C: TryGetable,
+    D: TryGetable,
+    E: TryGetable,
+    F: TryGetable,
+    G: TryGetable,
+    H: TryGetable,
+{
+    fn try_get_many(res: &QueryResult, pre: &str, cols: &[String]) -> Result<Self, TryGetError> {
+        try_get_many_with_slice_len_of(8, cols)?;
+        Ok((
+            A::try_get(res, pre, &cols[0])?,
+            B::try_get(res, pre, &cols[1])?,
+            C::try_get(res, pre, &cols[2])?,
+            D::try_get(res, pre, &cols[3])?,
+            E::try_get(res, pre, &cols[4])?,
+            F::try_get(res, pre, &cols[5])?,
+            G::try_get(res, pre, &cols[6])?,
+            H::try_get(res, pre, &cols[7])?,
+        ))
+    }
+}
+
+impl<A, B, C, D, E, F, G, H, I> TryGetableMany for (A, B, C, D, E, F, G, H, I)
+where
+    A: TryGetable,
+    B: TryGetable,
+    C: TryGetable,
+    D: TryGetable,
+    E: TryGetable,
+    F: TryGetable,
+    G: TryGetable,
+    H: TryGetable,
+    I: TryGetable,
+{
+    fn try_get_many(res: &QueryResult, pre: &str, cols: &[String]) -> Result<Self, TryGetError> {
+        try_get_many_with_slice_len_of(9, cols)?;
+        Ok((
+            A::try_get(res, pre, &cols[0])?,
+            B::try_get(res, pre, &cols[1])?,
+            C::try_get(res, pre, &cols[2])?,
+            D::try_get(res, pre, &cols[3])?,
+            E::try_get(res, pre, &cols[4])?,
+            F::try_get(res, pre, &cols[5])?,
+            G::try_get(res, pre, &cols[6])?,
+            H::try_get(res, pre, &cols[7])?,
+            I::try_get(res, pre, &cols[8])?,
+        ))
+    }
+}
+
+impl<A, B, C, D, E, F, G, H, I, J> TryGetableMany for (A, B, C, D, E, F, G, H, I, J)
+where
+    A: TryGetable,
+    B: TryGetable,
+    C: TryGetable,
+    D: TryGetable,
+    E: TryGetable,
+    F: TryGetable,
+    G: TryGetable,
+    H: TryGetable,
+    I: TryGetable,
+    J: TryGetable,
+{
+    fn try_get_many(res: &QueryResult, pre: &str, cols: &[String]) -> Result<Self, TryGetError> {
+        try_get_many_with_slice_len_of(10, cols)?;
+        Ok((
+            A::try_get(res, pre, &cols[0])?,
+            B::try_get(res, pre, &cols[1])?,
+            C::try_get(res, pre, &cols[2])?,
+            D::try_get(res, pre, &cols[3])?,
+            E::try_get(res, pre, &cols[4])?,
+            F::try_get(res, pre, &cols[5])?,
+            G::try_get(res, pre, &cols[6])?,
+            H::try_get(res, pre, &cols[7])?,
+            I::try_get(res, pre, &cols[8])?,
+            J::try_get(res, pre, &cols[9])?,
+        ))
+    }
+}
+
+impl<A, B, C, D, E, F, G, H, I, J, K> TryGetableMany for (A, B, C, D, E, F, G, H, I, J, K)
+where
+    A: TryGetable,
+    B: TryGetable,
+    C: TryGetable,
+    D: TryGetable,
+    E: TryGetable,
+    F: TryGetable,
+    G: TryGetable,
+    H: TryGetable,
+    I: TryGetable,
+    J: TryGetable,
+    K: TryGetable,
+{
+    fn try_get_many(res: &QueryResult, pre: &str, cols: &[String]) -> Result<Self, TryGetError> {
+        try_get_many_with_slice_len_of(11, cols)?;
+        Ok((
+            A::try_get(res, pre, &cols[0])?,
+            B::try_get(res, pre, &cols[1])?,
+            C::try_get(res, pre, &cols[2])?,
+            D::try_get(res, pre, &cols[3])?,
+            E::try_get(res, pre, &cols[4])?,
+            F::try_get(res, pre, &cols[5])?,
+            G::try_get(res, pre, &cols[6])?,
+            H::try_get(res, pre, &cols[7])?,
+            I::try_get(res, pre, &cols[8])?,
+            J::try_get(res, pre, &cols[9])?,
+            K::try_get(res, pre, &cols[10])?,
+        ))
+    }
+}
+
+impl<A, B, C, D, E, F, G, H, I, J, K, L> TryGetableMany for (A, B, C, D, E, F, G, H, I, J, K, L)
+where
+    A: TryGetable,
+    B: TryGetable,
+    C: TryGetable,
+    D: TryGetable,
+    E: TryGetable,
+    F: TryGetable,
+    G: TryGetable,
+    H: TryGetable,
+    I: TryGetable,
+    J: TryGetable,
+    K: TryGetable,
+    L: TryGetable,
+{
+    fn try_get_many(res: &QueryResult, pre: &str, cols: &[String]) -> Result<Self, TryGetError> {
+        try_get_many_with_slice_len_of(12, cols)?;
+        Ok((
+            A::try_get(res, pre, &cols[0])?,
+            B::try_get(res, pre, &cols[1])?,
+            C::try_get(res, pre, &cols[2])?,
+            D::try_get(res, pre, &cols[3])?,
+            E::try_get(res, pre, &cols[4])?,
+            F::try_get(res, pre, &cols[5])?,
+            G::try_get(res, pre, &cols[6])?,
+            H::try_get(res, pre, &cols[7])?,
+            I::try_get(res, pre, &cols[8])?,
+            J::try_get(res, pre, &cols[9])?,
+            K::try_get(res, pre, &cols[10])?,
+            L::try_get(res, pre, &cols[11])?,
+        ))
+    }
+}
+
+impl<A, B, C, D, E, F, G, H, I, J, K, L, M> TryGetableMany
+    for (A, B, C, D, E, F, G, H, I, J, K, L, M)
+where
+    A: TryGetable,
+    B: TryGetable,
+    C: TryGetable,
+    D: TryGetable,
+    E: TryGetable,
+    F: TryGetable,
+    G: TryGetable,
+    H: TryGetable,
+    I: TryGetable,
+    J: TryGetable,
+    K: TryGetable,
+    L: TryGetable,
+    M: TryGetable,
+{
+    fn try_get_many(res: &QueryResult, pre: &str, cols: &[String]) -> Result<Self, TryGetError> {
+        try_get_many_with_slice_len_of(13, cols)?;
+        Ok((
+            A::try_get(res, pre, &cols[0])?,
+            B::try_get(res, pre, &cols[1])?,
+            C::try_get(res, pre, &cols[2])?,
+            D::try_get(res, pre, &cols[3])?,
+            E::try_get(res, pre, &cols[4])?,
+            F::try_get(res, pre, &cols[5])?,
+            G::try_get(res, pre, &cols[6])?,
+            H::try_get(res, pre, &cols[7])?,
+            I::try_get(res, pre, &cols[8])?,
+            J::try_get(res, pre, &cols[9])?,
+            K::try_get(res, pre, &cols[10])?,
+            L::try_get(res, pre, &cols[11])?,
+            M::try_get(res, pre, &cols[12])?,
+        ))
+    }
+}
+
+impl<A, B, C, D, E, F, G, H, I, J, K, L, M, N> TryGetableMany
+    for (A, B, C, D, E, F, G, H, I, J, K, L, M, N)
+where
+    A: TryGetable,
+    B: TryGetable,
+    C: TryGetable,
+    D: TryGetable,
+    E: TryGetable,
+    F: TryGetable,
+    G: TryGetable,
+    H: TryGetable,
+    I: TryGetable,
+    J: TryGetable,
+    K: TryGetable,
+    L: TryGetable,
+    M: TryGetable,
+    N: TryGetable,
+{
+    fn try_get_many(res: &QueryResult, pre: &str, cols: &[String]) -> Result<Self, TryGetError> {
+        try_get_many_with_slice_len_of(14, cols)?;
+        Ok((
+            A::try_get(res, pre, &cols[0])?,
+            B::try_get(res, pre, &cols[1])?,
+            C::try_get(res, pre, &cols[2])?,
+            D::try_get(res, pre, &cols[3])?,
+            E::try_get(res, pre, &cols[4])?,
+            F::try_get(res, pre, &cols[5])?,
+            G::try_get(res, pre, &cols[6])?,
+            H::try_get(res, pre, &cols[7])?,
+            I::try_get(res, pre, &cols[8])?,
+            J::try_get(res, pre, &cols[9])?,
+            K::try_get(res, pre, &cols[10])?,
+            L::try_get(res, pre, &cols[11])?,
+            M::try_get(res, pre, &cols[12])?,
+            N::try_get(res, pre, &cols[13])?,
+        ))
+    }
+}
+
+impl<A, B, C, D, E, F, G, H, I, J, K, L, M, N, O> TryGetableMany
+    for (A, B, C, D, E, F, G, H, I, J, K, L, M, N, O)
+where
+    A: TryGetable,
+    B: TryGetable,
+    C: TryGetable,
+    D: TryGetable,
+    E: TryGetable,
+    F: TryGetable,
+    G: TryGetable,
+    H: TryGetable,
+    I: TryGetable,
+    J: TryGetable,
+    K: TryGetable,
+    L: TryGetable,
+    M: TryGetable,
+    N: TryGetable,
+    O: TryGetable,
+{
+    fn try_get_many(res: &QueryResult, pre: &str, cols: &[String]) -> Result<Self, TryGetError> {
+        try_get_many_with_slice_len_of(15, cols)?;
+        Ok((
+            A::try_get(res, pre, &cols[0])?,
+            B::try_get(res, pre, &cols[1])?,
+            C::try_get(res, pre, &cols[2])?,
+            D::try_get(res, pre, &cols[3])?,
+            E::try_get(res, pre, &cols[4])?,
+            F::try_get(res, pre, &cols[5])?,
+            G::try_get(res, pre, &cols[6])?,
+            H::try_get(res, pre, &cols[7])?,
+            I::try_get(res, pre, &cols[8])?,
+            J::try_get(res, pre, &cols[9])?,
+            K::try_get(res, pre, &cols[10])?,
+            L::try_get(res, pre, &cols[11])?,
+            M::try_get(res, pre, &cols[12])?,
+            N::try_get(res, pre, &cols[13])?,
+            O::try_get(res, pre, &cols[14])?,
+        ))
+    }
+}
+
+impl<A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P> TryGetableMany
+    for (A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P)
+where
+    A: TryGetable,
+    B: TryGetable,
+    C: TryGetable,
+    D: TryGetable,
+    E: TryGetable,
+    F: TryGetable,
+    G: TryGetable,
+    H: TryGetable,
+    I: TryGetable,
+    J: TryGetable,
+    K: TryGetable,
+    L: TryGetable,
+    M: TryGetable,
+    N: TryGetable,
+    O: TryGetable,
+    P: TryGetable,
+{
+    fn try_get_many(res: &QueryResult, pre: &str, cols: &[String]) -> Result<Self, TryGetError> {
+        try_get_many_with_slice_len_of(16, cols)?;
+        Ok((
+            A::try_get(res, pre, &cols[0])?,
+            B::try_get(res, pre, &cols[1])?,
+            C::try_get(res, pre, &cols[2])?,
+            D::try_get(res, pre, &cols[3])?,
+            E::try_get(res, pre, &cols[4])?,
+            F::try_get(res, pre, &cols[5])?,
+            G::try_get(res, pre, &cols[6])?,
+            H::try_get(res, pre, &cols[7])?,
+            I::try_get(res, pre, &cols[8])?,
+            J::try_get(res, pre, &cols[9])?,
+            K::try_get(res, pre, &cols[10])?,
+            L::try_get(res, pre, &cols[11])?,
+            M::try_get(res, pre, &cols[12])?,
+            N::try_get(res, pre, &cols[13])?,
+            O::try_get(res, pre, &cols[14])?,
+            P::try_get(res, pre, &cols[15])?,
+        ))
+    }
+}
+
+impl<A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q> TryGetableMany
+    for (A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q)
+where
+    A: TryGetable,
+    B: TryGetable,
+    C: TryGetable,
+    D: TryGetable,
+    E: TryGetable,
+    F: TryGetable,
+    G: TryGetable,
+    H: TryGetable,
+    I: TryGetable,
+    J: TryGetable,
+    K: TryGetable,
+    L: TryGetable,
+    M: TryGetable,
+    N: TryGetable,
+    O: TryGetable,
+    P: TryGetable,
+    Q: TryGetable,
+{
+    fn try_get_many(res: &QueryResult, pre: &str, cols: &[String]) -> Result<Self, TryGetError> {
+        try_get_many_with_slice_len_of(17, cols)?;
+        Ok((
+            A::try_get(res, pre, &cols[0])?,
+            B::try_get(res, pre, &cols[1])?,
+            C::try_get(res, pre, &cols[2])?,
+            D::try_get(res, pre, &cols[3])?,
+            E::try_get(res, pre, &cols[4])?,
+            F::try_get(res, pre, &cols[5])?,
+            G::try_get(res, pre, &cols[6])?,
+            H::try_get(res, pre, &cols[7])?,
+            I::try_get(res, pre, &cols[8])?,
+            J::try_get(res, pre, &cols[9])?,
+            K::try_get(res, pre, &cols[10])?,
+            L::try_get(res, pre, &cols[11])?,
+            M::try_get(res, pre, &cols[12])?,
+            N::try_get(res, pre, &cols[13])?,
+            O::try_get(res, pre, &cols[14])?,
+            P::try_get(res, pre, &cols[15])?,
+            Q::try_get(res, pre, &cols[16])?,
+        ))
+    }
+}
+
+impl<A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R> TryGetableMany
+    for (A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R)
+where
+    A: TryGetable,
+    B: TryGetable,
+    C: TryGetable,
+    D: TryGetable,
+    E: TryGetable,
+    F: TryGetable,
+    G: TryGetable,
+    H: TryGetable,
+    I: TryGetable,
+    J: TryGetable,
+    K: TryGetable,
+    L: TryGetable,
+    M: TryGetable,
+    N: TryGetable,
+    O: TryGetable,
+    P: TryGetable,
+    Q: TryGetable,
+    R: TryGetable,
+{
+    fn try_get_many(res: &QueryResult, pre: &str, cols: &[String]) -> Result<Self, TryGetError> {
+        try_get_many_with_slice_len_of(18, cols)?;
+        Ok((
+            A::try_get(res, pre, &cols[0])?,
+            B::try_get(res, pre, &cols[1])?,
+            C::try_get(res, pre, &cols[2])?,
+            D::try_get(res, pre, &cols[3])?,
+            E::try_get(res, pre, &cols[4])?,
+            F::try_get(res, pre, &cols[5])?,
+            G::try_get(res, pre, &cols[6])?,
+            H::try_get(res, pre, &cols[7])?,
+            I::try_get(res, pre, &cols[8])?,
+            J::try_get(res, pre, &cols[9])?,
+            K::try_get(res, pre, &cols[10])?,
+            L::try_get(res, pre, &cols[11])?,
+            M::try_get(res, pre, &cols[12])?,
+            N::try_get(res, pre, &cols[13])?,
+            O::try_get(res, pre, &cols[14])?,
+            P::try_get(res, pre, &cols[15])?,
+            Q::try_get(res, pre, &cols[16])?,
+            R::try_get(res, pre, &cols[17])?,
+        ))
+    }
+}
+
+impl<A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S> TryGetableMany
+    for (A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S)
+where
+    A: TryGetable,
+    B: TryGetable,
+    C: TryGetable,
+    D: TryGetable,
+    E: TryGetable,
+    F: TryGetable,
+    G: TryGetable,
+    H: TryGetable,
+    I: TryGetable,
+    J: TryGetable,
+    K: TryGetable,
+    L: TryGetable,
+    M: TryGetable,
+    N: TryGetable,
+    O: TryGetable,
+    P: TryGetable,
+    Q: TryGetable,
+    R: TryGetable,
+    S: TryGetable,
+{
+    fn try_get_many(res: &QueryResult, pre: &str, cols: &[String]) -> Result<Self, TryGetError> {
+        try_get_many_with_slice_len_of(19, cols)?;
+        Ok((
+            A::try_get(res, pre, &cols[0])?,
+            B::try_get(res, pre, &cols[1])?,
+            C::try_get(res, pre, &cols[2])?,
+            D::try_get(res, pre, &cols[3])?,
+            E::try_get(res, pre, &cols[4])?,
+            F::try_get(res, pre, &cols[5])?,
+            G::try_get(res, pre, &cols[6])?,
+            H::try_get(res, pre, &cols[7])?,
+            I::try_get(res, pre, &cols[8])?,
+            J::try_get(res, pre, &cols[9])?,
+            K::try_get(res, pre, &cols[10])?,
+            L::try_get(res, pre, &cols[11])?,
+            M::try_get(res, pre, &cols[12])?,
+            N::try_get(res, pre, &cols[13])?,
+            O::try_get(res, pre, &cols[14])?,
+            P::try_get(res, pre, &cols[15])?,
+            Q::try_get(res, pre, &cols[16])?,
+            R::try_get(res, pre, &cols[17])?,
+            S::try_get(res, pre, &cols[18])?,
+        ))
+    }
+}
+
+impl<A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T> TryGetableMany
+    for (A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T)
+where
+    A: TryGetable,
+    B: TryGetable,
+    C: TryGetable,
+    D: TryGetable,
+    E: TryGetable,
+    F: TryGetable,
+    G: TryGetable,
+    H: TryGetable,
+    I: TryGetable,
+    J: TryGetable,
+    K: TryGetable,
+    L: TryGetable,
+    M: TryGetable,
+    N: TryGetable,
+    O: TryGetable,
+    P: TryGetable,
+    Q: TryGetable,
+    R: TryGetable,
+    S: TryGetable,
+    T: TryGetable,
+{
+    fn try_get_many(res: &QueryResult, pre: &str, cols: &[String]) -> Result<Self, TryGetError> {
+        try_get_many_with_slice_len_of(20, cols)?;
+        Ok((
+            A::try_get(res, pre, &cols[0])?,
+            B::try_get(res, pre, &cols[1])?,
+            C::try_get(res, pre, &cols[2])?,
+            D::try_get(res, pre, &cols[3])?,
+            E::try_get(res, pre, &cols[4])?,
+            F::try_get(res, pre, &cols[5])?,
+            G::try_get(res, pre, &cols[6])?,
+            H::try_get(res, pre, &cols[7])?,
+            I::try_get(res, pre, &cols[8])?,
+            J::try_get(res, pre, &cols[9])?,
+            K::try_get(res, pre, &cols[10])?,
+            L::try_get(res, pre, &cols[11])?,
+            M::try_get(res, pre, &cols[12])?,
+            N::try_get(res, pre, &cols[13])?,
+            O::try_get(res, pre, &cols[14])?,
+            P::try_get(res, pre, &cols[15])?,
+            Q::try_get(res, pre, &cols[16])?,
+            R::try_get(res, pre, &cols[17])?,
+            S::try_get(res, pre, &cols[18])?,
+            T::try_get(res, pre, &cols[19])?,
+        ))
+    }
+}
+
 fn try_get_many_with_slice_len_of(len: usize, cols: &[String]) -> Result<(), TryGetError> {
     if cols.len() < len {
         Err(TryGetError::DbErr(DbErr::Query(format!(
@@ -489,6 +1057,22 @@ macro_rules! try_from_u64_err {
 try_from_u64_err!(A, B);
 try_from_u64_err!(A, B, C);
 try_from_u64_err!(A, B, C, D);
+try_from_u64_err!(A, B, C, D, E);
+try_from_u64_err!(A, B, C, D, E, F);
+try_from_u64_err!(A, B, C, D, E, F, G);
+try_from_u64_err!(A, B, C, D, E, F, G, H);
+try_from_u64_err!(A, B, C, D, E, F, G, H, I);
+try_from_u64_err!(A, B, C, D, E, F, G, H, I, J);
+try_from_u64_err!(A, B, C, D, E, F, G, H, I, J, K);
+try_from_u64_err!(A, B, C, D, E, F, G, H, I, J, K, L);
+try_from_u64_err!(A, B, C, D, E, F, G, H, I, J, K, L, M);
+try_from_u64_err!(A, B, C, D, E, F, G, H, I, J, K, L, M, N);
+try_from_u64_err!(A, B, C, D, E, F, G, H, I, J, K, L, M, N, O);
+try_from_u64_err!(A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P);
+try_from_u64_err!(A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q);
+try_from_u64_err!(A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R);
+try_from_u64_err!(A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S);
+try_from_u64_err!(A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T);
 
 macro_rules! try_from_u64_numeric {
     ( $type: ty ) => {
